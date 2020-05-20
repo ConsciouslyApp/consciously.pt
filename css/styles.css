@@ -1,8 +1,9 @@
 /* PAGE & INPUT STYLING */
 body {
-  background: #5D3FBB;
-  background-image: linear-gradient(#BB68D4,#5D3FBB);
-  color: #FFF;
+  background-color:rgb(246, 245, 240);
+  color: rgb(66, 49, 69);
+  font-family: 'Aleo', serif;
+  font-size: 1.2rem;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
   transition: background 600ms ease, color 600ms ease;
 }
 .btn span {
-  border: 1px solid #413a3a;
+  border: 1px solid rgb(209, 208, 204);
   display: inline-block;
   padding: 1px 6px;
   font-size: 12px;
@@ -32,8 +33,8 @@ a {
 }
 
 .btn-primary {
-  border: 1px solid #4B3082;
-  background-image: linear-gradient(#5D3FBB, #4B3082);
+  border: none;
+  background-image: linear-gradient(rgb(228, 87, 41), rgb(228, 87, 41));
   transition: 0.3s;
   opacity: 1;
   width: 100px;
@@ -42,11 +43,12 @@ a {
 }
 
 .btn-primary:hover{
-  border: 1px solid #FFF;
-  background-image: linear-gradient(#5D3FBB, #4B3082);
+  border: none;
+  background-image: linear-gradient(rgb(255, 99, 46), rgb(255, 99, 46));
   opacity: 0.9;
   outline: 0px !important;
   -webkit-appearance: none;
+  box-shadow: 1px 1px 2px rgb(248, 123, 81), 0 0 2px rgb(255, 99, 46), 0 0 2px rgb(255, 134, 94);
 }
 .btn:focus,.btn:active {
   outline: none !important;
@@ -54,13 +56,14 @@ a {
 }
 
 h1.logo {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
   font-size: 4.2rem;
 }
 
 h2.tagline {
-	font-weight: 600;
+  font-family: 'Aleo', serif;
+  font-weight: 400;
+
   font-size: 1.7rem;
 }
 
@@ -79,7 +82,7 @@ h2.tagline {
   width:100%;
 }
 .link a, .icons-social a {
-	color: #CEA7FF;
+	color: #836395;
 	transition: 0.3s;
 }
 .icons-social a{
@@ -90,7 +93,7 @@ h2.tagline {
 }
 .icons-social a:hover, .link a:hover{
 	font-size: 3rem;
-  color: #FFF;
+  color: rgb(255, 99, 46);
   text-decoration: none;
 }
 
@@ -104,4 +107,137 @@ h2.tagline {
   margin:0 auto;
   max-width: 300px;
   min-width: 200px;
+}
+
+.area{
+  width: 100%;
+  height:100vh;
+  z-index: -1000;
+  position: absolute;
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  -webkit-filter: drop-shadow( 2px 2px 1px #BAF);
+  filter: drop-shadow( 2px 2px 1px #BAF);
+ 
+  
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 2s;
+  animation-duration: 30s;
+  
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+  
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+  
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 3s;
+  
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 7s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0s;
+  animation-duration: 17s;
+}
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.7;
+      border-radius: 100%;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 0%;
+  }
+
+}
+
+.small-icon {
+  font-size: 0.8rem;
+  height: 0.8rem
 }
